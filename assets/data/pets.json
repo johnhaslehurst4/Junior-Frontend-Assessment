@@ -63,5 +63,15 @@
     "breed": "persian",
     "favoriteFood": "fish",
     "favoriteToy": "feather"
+  },
+  {
+    "name": "Hank",
+    "species": "dog",
+    "age": 1,
+    "color": "red",
+    "breed": "labrador",
+    "favoriteFood": "sausages",
+    "favoriteToy": "ball",
+    "special": true
   }
 ]

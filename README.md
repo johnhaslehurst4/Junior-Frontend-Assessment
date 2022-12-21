@@ -1,3 +1,16 @@
+First github commit:
+Completed issues 1, 3 and 4.
+There is now a variable in the style.scss called 'brandprimary'.
+The links have a softer transition over 300ms to grey in the navbar and a slight opacity. 
+Mobile breakpoint updated from 600px to 767px.
+
+Second github commit:
+Completed issues 2, 6 and 7
+The animals are now being sorted alphabetically with the featured animals pushed to the front. This was achieved by sorting the data at the point it is fetched from the JSON file. 
+I added a new record into pets.JSON for my family pet, Hank. I could then do issues 6 and 7 at the same time, by adding conditional CSS classes in the generateCard function which would add the appropriate classes to the cards. This was then styled in styles.scss. A gold border for featured pets and I have given a red border to the pet with the 'special' property.
+
+
+
 # HEAT Junior Frontend Assessment
 
 In this assessment you are provided a landing page with various issues (detailed below). Your task is to solve the issues to the best of your ability. You can take as much time as you need, but we recommend completing this assessment in one go.

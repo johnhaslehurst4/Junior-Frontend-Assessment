@@ -3,6 +3,8 @@
 
 //variables
 $brandprimary: #7AACC3;
+$featured: gold;
+$special: red;
 
 // Header
 .main-header {
@@ -119,6 +121,14 @@ main {
   &__card {
     border: 3px solid #EFEFEF;
     padding: 20px;
+
+    &.featured-pet {
+      border-color: $featured;
+    }
+
+    &.special-pet {
+      border-color: $special;
+    }
 
     &__title {
       text-align: center;

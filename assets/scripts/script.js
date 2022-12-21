@@ -6,7 +6,7 @@ const pushPet = pet => {
 
 class Pet {
   constructor(name,
-    species, age, color, breed, favoriteFood, favoriteToy, featured = false) {
+    species, age, color, breed, favoriteFood, favoriteToy, featured = false, special = false) {
     this.name = name;
     this.species = species;
     this.age = age;
@@ -15,11 +15,16 @@ class Pet {
     this.favoriteFood = favoriteFood;
     this.favoriteToy = favoriteToy;
     this.featured = featured;
+    this.special = special;
   }
 
   generateCard() {
+
+      const featuredClass = this.featured ? 'featured-pet' : '';
+      const specialClass = this.special ? 'special-pet' : '';
+
     return `
-      <div class="pets__card">
+      <div class="pets__card ${featuredClass} ${specialClass}">
         <h2 class="pets__card__title">${this.name}</h2>
         <p class="pets__card__info">Species: ${this.species}</p>
         <p class="pets__card__info">Age: ${this.age}</p>
@@ -43,7 +48,21 @@ class Pet {
   }
 }
 
-const petData = fetch('assets/data/pets.json').then(response => response.json()).then(data => {
+const petData = fetch('assets/data/pets.json')
+.then(response => response.json())
+.then(data => {
+
+  //sort the data alphabetically and featured status
+  data.sort((a, b) => {
+    if(a.featured && !b.featured) {
+      return -1;
+    } else if (!a.featured && b.featured) {
+      return 1;
+    } else {
+      return (a.name > b.name ? 1 : -1);
+    }
+    });
+
   data.forEach(pet => {
     pushPet(new Pet(
       pet.name,
@@ -53,7 +72,8 @@ const petData = fetch('assets/data/pets.json').then(response => response.json())
       pet.breed,
       pet.favoriteFood,
       pet.favoriteToy,
-      pet.featured
+      pet.featured,
+      pet.special
     ));
   });
 });

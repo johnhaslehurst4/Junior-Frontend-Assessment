@@ -170,6 +170,12 @@ main {
   border: 3px solid #EFEFEF;
   padding: 20px;
 }
+.pets__card.featured-pet {
+  border-color: gold;
+}
+.pets__card.special-pet {
+  border-color: red;
+}
 .pets__card__title {
   text-align: center;
   font-size: 18px;
