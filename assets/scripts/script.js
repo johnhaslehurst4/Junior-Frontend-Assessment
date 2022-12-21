@@ -76,4 +76,23 @@ const petData = fetch('assets/data/pets.json')
       pet.special
     ));
   });
+
+  //Add event listener to buttons and opening modal
+
+  const buttons = document.querySelectorAll('.pets__card__button');
+  const modalContainer = document.querySelector('.modalContainer');
+  const modalButton = document.querySelector('.modal__button');
+
+  for(let i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener('click', () => {
+      modalContainer.classList.add('show')
+    });
+  }
+
+  //closing modal
+  modalButton.addEventListener('click', () => {
+    modalContainer.classList.remove('show')
+  })
+
+
 });

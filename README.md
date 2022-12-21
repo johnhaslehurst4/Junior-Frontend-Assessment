@@ -1,13 +1,17 @@
-First github commit:
+## First github commit:
 Completed issues 1, 3 and 4.
 There is now a variable in the style.scss called 'brandprimary'.
 The links have a softer transition over 300ms to grey in the navbar and a slight opacity. 
 Mobile breakpoint updated from 600px to 767px.
 
-Second github commit:
+## Second github commit:
 Completed issues 2, 6 and 7
 The animals are now being sorted alphabetically with the featured animals pushed to the front. This was achieved by sorting the data at the point it is fetched from the JSON file. 
-I added a new record into pets.JSON for my family pet, Hank. I could then do issues 6 and 7 at the same time, by adding conditional CSS classes in the generateCard function which would add the appropriate classes to the cards. This was then styled in styles.scss. A gold border for featured pets and I have given a red border to the pet with the 'special' property.
+I added a new record into pets.JSON for my family pet, Hank. I could then do issues 6 and 7 at the same time, by adding conditional CSS classes in the generateCard function which adds the appropriate classes to the cards. This is then styled in styles.scss. A gold border for featured pets and I have given a red border to the pet with the 'special' property.
+
+## Third github commit:
+Completed issue 5. Created a modal that would be displayed whenever any of the 'More Info' buttons were clicked. To do this I used a querySelector on the '.pets__card__button' class that returned a node list, which behaves like an array. I then used a for loop to add a click event listener to each button that would add a class to my modal and make it visible. 
+I then used another querySelector to add another 'click' event listener to the button in my modal. This removes the 'show' class. Making my modal invisible again.  
 
 
 
